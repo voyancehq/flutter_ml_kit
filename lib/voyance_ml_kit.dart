@@ -1,4 +1,4 @@
-library voyance_flutter_ml_kit;
+library voyance_ml_kit;
 
 /// A Calculator.
 class Calculator {
