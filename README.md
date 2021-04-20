@@ -1,4 +1,4 @@
-# voyance_flutter_ml_kit
+# voyance_ml_kit
 
 A new Flutter package.
 
