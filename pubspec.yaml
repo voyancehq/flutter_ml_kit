@@ -3,7 +3,7 @@ name: voyance_ml_kit
 description: Voyance ML Kit for data collection and real time verification system.
 version: 0.0.1
 author: Sodimu Segun Michael<michae@voyancehq.com>
-homepage:
+homepage: https://gitlab.com/voyance-engineering/voyance_flutter_ml_kit
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
