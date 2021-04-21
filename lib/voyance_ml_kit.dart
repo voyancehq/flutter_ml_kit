@@ -7,15 +7,15 @@ class MLKit {
   /// Returns [value] plus 1.
   int addOne(int value) => value + 1;
 
-  initialize(String secretKey, String publicKey){
+  initialize({String secretKey, String publicKey}){
     print("This is great > " + secretKey + " -- " + publicKey);
   }
 
-  beginCapture(BuildContext ctx){
-
-
+  // beginCapture is a method that allow
+  // uploading of image
+  beginCapture({String country, String DocumentType, BuildContext context, String requestToken}){
     Navigator.push(
-      ctx,
+      context,
       MaterialPageRoute(builder: (context) => VCaptureHome()),
     );
   }

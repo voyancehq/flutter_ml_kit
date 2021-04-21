@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:image_crop/image_crop.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:voyance_ml_kit/capture/capture_send.dart';
-// import 'package:voyanceapp/Page2.dart';
+// import 'package:voyanceapp/Page2.dart';}
 
 // import 'camera.dart';
 
