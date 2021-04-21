@@ -2,13 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e03a831c-b6b8-4a1b-9e37-4672ebcf4fa0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/capture/capture_home.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/capture/capture_send.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/voyance_ml_kit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/voyance_ml_kit.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,5 +61,9 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="421" y="261" width="762" height="578" key="#example/lib/main.dart/72.27.1848.1053@72.27.1848.1053" timestamp="1618930743353" />
+    <state x="471" y="189" width="670" height="676" key="search.everywhere.popup" timestamp="1618986602276">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="471" y="189" width="670" height="676" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1618986602276" />
   </component>
 </project>
