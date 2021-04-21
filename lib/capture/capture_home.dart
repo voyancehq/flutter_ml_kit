@@ -2,29 +2,9 @@ import 'dart:io';
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:image_crop/image_crop.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:voyance_ml_kit/capture/capture_send.dart';
-// import 'package:voyanceapp/Page2.dart';}
-
-// import 'camera.dart';
-
-// void main() {
-//   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-//     statusBarColor: Colors.transparent,
-//     statusBarBrightness: Brightness.dark,
-//     statusBarIconBrightness: Brightness.light,
-//     systemNavigationBarIconBrightness: Brightness.light,
-//   ));
-//
-//   // runApp(new MyApp());
-//   runApp(MaterialApp(
-//     title: "App",
-//     debugShowCheckedModeBanner: false,
-//     home: MyApp(),
-//   ));
-// }
 
 class VCaptureHome extends StatefulWidget {
 
@@ -66,19 +46,7 @@ class _VCaptureHome extends State<VCaptureHome> {
         ),
       ),
     );
-    // );
 
-
-
-    // return SafeArea(
-    //     child: Container(
-    //       color: Colors.black,
-    //       padding: const EdgeInsets.symmetric(vertical: 40.0, horizontal: 20.0),
-    //       child: _sample == null ? _buildOpeningImage() : _buildCroppingImage(),
-    //     ),
-    //   );
-
-    // );
   }
 
   Widget _buildOpeningImage() {
@@ -116,37 +84,16 @@ class _VCaptureHome extends State<VCaptureHome> {
   }
 
   Widget _buildOpenImage() {
-    // return FlatButton(
-    //   child: Text(
-    //     'Open Image',
-    //     style: Theme.of(context).textTheme.button.copyWith(color: Colors.white),
-    //   ),
-    //   onPressed: () => _openImage(),
-    // );
+
     return Column(
       children: [
 
-        //   Container(
-        //       height: 200,
-        //       // width: 300,
-        //       alignment: Alignment.topLeft,
-        //       decoration: BoxDecoration(
-        //           color: Colors.white,
-        //       ),
-        //     child: _lastCropped != null ? Image.file(_lastCropped) : SizedBox(),
-        //   ),
-        // SizedBox(height: 10,),
         FlatButton(
           child: Text(
             'Camera',
             style: Theme.of(context).textTheme.button.copyWith(color: Colors.white),
           ),
-          // onPressed: () => _openImage(),
-          //   onPressed: () {
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(builder: (context) => Camera()),
-          // );
+
           onPressed: () => _openImage(1),
 
         ),
@@ -180,13 +127,9 @@ class _VCaptureHome extends State<VCaptureHome> {
   Future<void> _cropImage() async {
     final scale = cropKey.currentState.scale;
     final area = cropKey.currentState.area;
-    print(">>>>>>>>>>>>>>>>>.");
-    print(area.width);
-    print(area.height);
-    print("<<<<<<<<<<<<<<<<<<<<<");
+
     if (area == null) {
       // cannot crop, widget is not setup
-      print(">>>>>>>>>>>>>>>>>>>>>>>>>>> ");
       return;
     }
 
@@ -210,15 +153,6 @@ class _VCaptureHome extends State<VCaptureHome> {
     _lastCropped = file;
 
     debugPrint('$file');
-
-    // setState(() {
-    //   _sample = null;
-    // });
-
-
-    print('$_file');
-    print(" >>> " +_lastCropped.path);
-
 
     Navigator.push(
       context,

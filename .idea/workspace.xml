@@ -5,7 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/capture/capture_home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/capture/capture_home.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/capture/capture_send.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/capture/capture_send.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/voyance_ml_kit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/voyance_ml_kit.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +54,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="534" y="342" width="525" height="423" key="#com.intellij.ide.util.TreeFileChooserDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1618930739776" />
-    <state x="421" y="261" width="762" height="592" key="#example/lib/main.dart" timestamp="1618989908484">
+    <state x="421" y="261" width="762" height="592" key="#example/lib/main.dart" timestamp="1618994369144">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="421" y="261" width="762" height="592" key="#example/lib/main.dart/72.27.1848.1053@72.27.1848.1053" timestamp="1618989908484" />
+    <state x="421" y="261" width="762" height="592" key="#example/lib/main.dart/72.27.1848.1053@72.27.1848.1053" timestamp="1618994369144" />
     <state x="172" y="127" width="1270" height="840" key="AVDManager" timestamp="1618989420341">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
