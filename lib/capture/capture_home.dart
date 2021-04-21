@@ -59,7 +59,7 @@ class _VCaptureHome extends State<VCaptureHome> {
       ),
     );
     // );
-  }
+
 
 
     // return SafeArea(
