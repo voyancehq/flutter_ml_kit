@@ -11,7 +11,11 @@ import 'package:tflite/tflite.dart';
 class VCaptureSend extends StatefulWidget {
 
   final File imagepath;
-  const VCaptureSend({Key key,this.imagepath}) : super(key: key);
+  final String Country;
+  final String DocumentType;
+  final String Token;
+
+  const VCaptureSend({Key key,this.imagepath, this.Country, this.DocumentType, this.Token}) : super(key: key);
 
   @override
   _VCaptureSend createState() => _VCaptureSend();
@@ -107,6 +111,9 @@ class _VCaptureSend extends State<VCaptureSend> {
                 RaisedButton(
                     onPressed: () {
                       // classifyImage(widget.imagepath);
+                      print(widget.Token);
+                      print(widget.Country);
+                      print(widget.DocumentType);
                     },
                     child: Text("Upload Image")
                 ),

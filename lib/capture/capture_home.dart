@@ -27,6 +27,14 @@ import 'package:voyance_ml_kit/capture/capture_send.dart';
 // }
 
 class VCaptureHome extends StatefulWidget {
+
+  final String Country;
+  final String DocumentType;
+  final String Token;
+
+  const VCaptureHome({Key key,this.Country, this.DocumentType, this.Token}) : super(key: key);
+
+
   @override
   _VCaptureHome createState() => new _VCaptureHome();
 }
@@ -214,7 +222,7 @@ class _VCaptureHome extends State<VCaptureHome> {
 
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => VCaptureSend(imagepath: _lastCropped)),
+      MaterialPageRoute(builder: (context) => VCaptureSend(imagepath: _lastCropped, DocumentType: widget.DocumentType, Country: widget.Country, Token: widget.Token)),
     );
   }
 }

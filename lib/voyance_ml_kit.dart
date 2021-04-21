@@ -16,7 +16,7 @@ class MLKit {
   beginCapture({String country, String documentType, BuildContext context, String requestToken}){
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => VCaptureHome()),
+      MaterialPageRoute(builder: (context) => VCaptureHome(Country: country, DocumentType: documentType, Token: requestToken)),
     );
   }
 }
