@@ -13,7 +13,7 @@ class MLKit {
 
   // beginCapture is a method that allow
   // uploading of image
-  beginCapture({String country, String DocumentType, BuildContext context, String requestToken}){
+  beginCapture({String country, String documentType, BuildContext context, String requestToken}){
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => VCaptureHome()),
