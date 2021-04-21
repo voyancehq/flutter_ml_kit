@@ -1,27 +1,49 @@
-# voyance_ml_kit
+# Voyance ML Kit
 
-A new Flutter package.
+Voyance ML Kit is a flutter SDK developed to perform machine learning capabilities from your mobile device.
 
-## Getting Started
+This current version of the SDK only data collection process.
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+## Installation
+The SDK is only available from github and not pub.dev.
 
-Change minSdk to
+1. Due to the camera usage, we will need to update the gradle file and increase minSdkVersion value to an higer version.
 
-```
-  defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.voyanceapp"
+    from your project directory, open `android/app/build.gradle` file and change the `minSdkVersion` number to 21 as below.
+
+    ```
+    defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 29
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
+        ...
     }
+    ```
+
+2. open the `pubsec.yaml` file in your project and add the plugin in the format below.
+    ```
+    dependencies:
+      flutter:
+        sdk: flutter
+      voyance_ml_kit:
+        git:
+          url: git://github.com/voyancehq/flutter_ml_kit.git
+          ref: master
+    ```
+
+## Implementation
+```
+// import the ml kit
+import 'package:voyance_ml_kit/voyance_ml_kit.dart';
+
+// the block of code is all you need from your application logic to trigger
+// the sdk with the below parameters
+onPressed: (){
+  String country = "Nigeria";
+  String documentType = "International Passport";
+  String accessKey = "3959595955";
+  String secretKey = "49595969695";
+  String responseRoute = "/success-upload";
+  MLKit().beginCapture(context: context, country: "NG", documentType: documentType, accessKey: accessKey, secretKey:secretKey, responseRoute: responseRoute);
+},
+
 ```

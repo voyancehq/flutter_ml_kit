@@ -6,16 +6,18 @@ import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:tflite/tflite.dart';
 
-
+import 'package:dio/dio.dart';
 
 class VCaptureSend extends StatefulWidget {
 
   final File imagepath;
   final String Country;
   final String DocumentType;
-  final String Token;
+  final String SecretKey;
+  final String AccessKey;
+  final String ResponseRoute;
 
-  const VCaptureSend({Key key,this.imagepath, this.Country, this.DocumentType, this.Token}) : super(key: key);
+  const VCaptureSend({Key key,this.imagepath, this.Country, this.DocumentType, this.AccessKey, this.SecretKey, this.ResponseRoute}) : super(key: key);
 
   @override
   _VCaptureSend createState() => _VCaptureSend();
@@ -51,11 +53,48 @@ class _VCaptureSend extends State<VCaptureSend> {
                 ),
                 SizedBox(height: 10,),
                 RaisedButton(
-                    onPressed: () {
+                    onPressed: () async{
                       // classifyImage(widget.imagepath);
-                      print(widget.Token);
-                      print(widget.Country);
-                      print(widget.DocumentType);
+                      // print(widget.Token);
+                      // print(widget.Country);
+                      // print(widget.DocumentType);
+
+                      Response response;
+                      var dio = Dio();
+
+                      try {
+                        //404
+                        var formData = FormData.fromMap({
+                          'country': widget.Country,
+                          'document_type': widget.DocumentType,
+                          'file': await MultipartFile.fromFile(widget.imagepath.path,filename: 'image.png')
+                        });
+                        response = await dio.post(
+                            '/info',
+                            data: formData,
+                            options: Options(
+                              headers: {
+                                "X-Access-Key": widget.AccessKey,
+                                "X-Secret-Key" :widget.SecretKey
+                              },
+                          ),
+                        );
+
+                       Navigator.pushNamed(context, widget.ResponseRoute,arguments: {'status' : response.statusCode});
+
+                      } on DioError catch (e) {
+                        // The request was made and the server responded with a status code
+                        // that falls out of the range of 2xx and is also not 304.
+                        if (e.response != null) {
+                          Navigator.pushNamed(context, widget.ResponseRoute,arguments: {'status' : e.response.statusCode});
+
+                        } else {
+                          // Something happened in setting up or sending the request that triggered an Error
+                          Navigator.pushNamed(context, widget.ResponseRoute,arguments: {'status' : e.response.statusCode});
+                        }
+                      }
+
+
                     },
                     child: Text("Upload Image")
                 ),

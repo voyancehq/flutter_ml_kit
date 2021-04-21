@@ -15,7 +15,7 @@ dependencies:
   image_crop: ^0.3.4
   image_picker:
   camerawesome: ^0.2.2
-  dio: ^4.0.0
+  dio: ^3.0.0
   tflite: ^1.1.1
 
 dev_dependencies:

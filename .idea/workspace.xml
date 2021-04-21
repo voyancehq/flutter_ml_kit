@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e03a831c-b6b8-4a1b-9e37-4672ebcf4fa0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/capture/capture_home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/capture/capture_home.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/capture/capture_send.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/capture/capture_send.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/voyance_ml_kit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/voyance_ml_kit.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
