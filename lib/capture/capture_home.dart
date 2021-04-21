@@ -13,8 +13,9 @@ class VCaptureHome extends StatefulWidget {
   final String SecretKey;
   final String AccessKey;
   final String ResponseRoute;
+  final String ServerURL;
 
-  const VCaptureHome({Key key,this.Country, this.DocumentType, this.SecretKey, this.AccessKey, this.ResponseRoute}) : super(key: key);
+  const VCaptureHome({Key key,this.Country, this.DocumentType, this.SecretKey, this.AccessKey, this.ResponseRoute, this.ServerURL}) : super(key: key);
 
 
   @override
@@ -158,7 +159,7 @@ class _VCaptureHome extends State<VCaptureHome> {
 
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => VCaptureSend(imagepath: _lastCropped, DocumentType: widget.DocumentType, Country: widget.Country, AccessKey: widget.AccessKey, SecretKey: widget.SecretKey, ResponseRoute: widget.ResponseRoute)),
+      MaterialPageRoute(builder: (context) => VCaptureSend(imagepath: _lastCropped, DocumentType: widget.DocumentType, Country: widget.Country, AccessKey: widget.AccessKey, SecretKey: widget.SecretKey, ResponseRoute: widget.ResponseRoute, ServerURL: widget.ServerURL )),
     );
   }
 }

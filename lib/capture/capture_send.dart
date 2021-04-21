@@ -16,8 +16,9 @@ class VCaptureSend extends StatefulWidget {
   final String SecretKey;
   final String AccessKey;
   final String ResponseRoute;
+  final String ServerURL;
 
-  const VCaptureSend({Key key,this.imagepath, this.Country, this.DocumentType, this.AccessKey, this.SecretKey, this.ResponseRoute}) : super(key: key);
+  const VCaptureSend({Key key,this.imagepath, this.Country, this.DocumentType, this.AccessKey, this.SecretKey, this.ResponseRoute, this.ServerURL}) : super(key: key);
 
   @override
   _VCaptureSend createState() => _VCaptureSend();
@@ -70,7 +71,7 @@ class _VCaptureSend extends State<VCaptureSend> {
                           'file': await MultipartFile.fromFile(widget.imagepath.path,filename: 'image.png')
                         });
                         response = await dio.post(
-                            '/info',
+                            widget.ServerURL,
                             data: formData,
                             options: Options(
                               headers: {
@@ -80,17 +81,21 @@ class _VCaptureSend extends State<VCaptureSend> {
                           ),
                         );
 
+                        print("Success");
                        Navigator.pushNamed(context, widget.ResponseRoute,arguments: {'status' : response.statusCode});
+
 
                       } on DioError catch (e) {
                         // The request was made and the server responded with a status code
                         // that falls out of the range of 2xx and is also not 304.
                         if (e.response != null) {
                           Navigator.pushNamed(context, widget.ResponseRoute,arguments: {'status' : e.response.statusCode});
+                          print(" >>>>>>>>>>>>>> " + e.response.statusCode.toString());
 
                         } else {
                           // Something happened in setting up or sending the request that triggered an Error
                           Navigator.pushNamed(context, widget.ResponseRoute,arguments: {'status' : e.response.statusCode});
+                          print(" <<<<<<<<<<<<<<<< " + e.response.statusCode.toString());
                         }
                       }
 
