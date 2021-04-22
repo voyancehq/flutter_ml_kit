@@ -4,7 +4,6 @@
 
 import 'package:flutter/material.dart';
 import 'dart:io';
-import 'package:tflite/tflite.dart';
 
 import 'package:dio/dio.dart';
 
