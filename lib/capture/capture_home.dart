@@ -112,9 +112,14 @@ class _VCaptureHome extends State<VCaptureHome> {
   }
 
   Future<void> _openImage(int type) async {
-    final file = await ImagePicker.pickImage(source: type == 1 ? ImageSource.camera : ImageSource.gallery);
+    final picker = ImagePicker();
+
+    // final file = await ImagePicker.pickImage(source: type == 1 ? ImageSource.camera : ImageSource.gallery);
+    final file = await picker.getImage(source: type == 1 ? ImageSource.camera : ImageSource.gallery);
+
     final sample = await ImageCrop.sampleImage(
-      file: file,
+      // file: file,
+      file: File(file.path),
       preferredSize: context.size.longestSide.ceil(),
     );
 
@@ -123,7 +128,8 @@ class _VCaptureHome extends State<VCaptureHome> {
 
     setState(() {
       _sample = sample;
-      _file = file;
+      // _file = file;
+      _file = File(file.path);
     });
   }
 
