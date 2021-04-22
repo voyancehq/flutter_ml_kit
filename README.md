@@ -43,7 +43,9 @@ onPressed: (){
   String accessKey = "3959595955";
   String secretKey = "49595969695";
   String responseRoute = "/success-upload";
-  MLKit().beginCapture(context: context, country: "NG", documentType: documentType, accessKey: accessKey, secretKey:secretKey, responseRoute: responseRoute);
+  String serverurl = "http://192.168.43.148:5000/upload";
+  MLKit().beginCapture(context: context, country: country, documentType: documentType, secretKey: secretKey, accessKey: accessKey, serverURL: serverurl, responseRoute:  responseRoute);
+
 },
 
 ```
