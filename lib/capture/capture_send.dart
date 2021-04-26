@@ -73,6 +73,7 @@ class _VCaptureSend extends State<VCaptureSend> {
                       // print(widget.Token);
                       // print(widget.Country);
                       // print(widget.DocumentType);
+                      print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
                       bool res = await isImageBlurry(widget.imagepath.path);
                       print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
                       print(res);
