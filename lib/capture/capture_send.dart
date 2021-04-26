@@ -6,6 +6,9 @@ import 'package:flutter/material.dart';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:opencv/opencv.dart';
+import 'package:flutter/services.dart';
+import 'dart:async';
 
 class VCaptureSend extends StatefulWidget {
 
@@ -24,10 +27,22 @@ class VCaptureSend extends StatefulWidget {
 }
 
 class _VCaptureSend extends State<VCaptureSend> {
+  static const MethodChannel _channel =   const MethodChannel('voyance');
 
   @override
   void initState() {
     super.initState();
+  }
+
+  static Future<bool> isImageBlurry(String path) async {
+    final int result = await _channel.invokeMethod("isImageBlurry", {"filePath": path});
+    if(result == 1){
+      return true;
+    }else if(result == -1){
+      throw("Cannot continue operation");
+    } else {
+      return false;
+    }
   }
 
   @override
@@ -58,6 +73,11 @@ class _VCaptureSend extends State<VCaptureSend> {
                       // print(widget.Token);
                       // print(widget.Country);
                       // print(widget.DocumentType);
+                      bool res = await isImageBlurry(widget.imagepath.path);
+                      print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+                      print(res);
+
+                      return;
 
                       Response response;
                       var dio = Dio();
