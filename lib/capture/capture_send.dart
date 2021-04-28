@@ -85,44 +85,44 @@ class _VCaptureSend extends State<VCaptureSend> {
                       print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
 
 
-                      Response response;
-                      var dio = Dio();
-
-                      try {
-                        //404
-                        var formData = FormData.fromMap({
-                          'country': widget.Country,
-                          'document_type': widget.DocumentType,
-                          'file': await MultipartFile.fromFile(widget.imagepath.path,filename: 'image.png')
-                        });
-                        response = await dio.post(
-                            widget.ServerURL,
-                            data: formData,
-                            options: Options(
-                              headers: {
-                                "X-Access-Key": widget.AccessKey,
-                                "X-Secret-Key" :widget.SecretKey
-                              },
-                          ),
-                        );
-
-                        print("Success");
-                       Navigator.pushNamed(context, widget.ResponseRoute,arguments: {'status' : response.statusCode});
-
-
-                      } on DioError catch (e) {
-                        // The request was made and the server responded with a status code
-                        // that falls out of the range of 2xx and is also not 304.
-                        if (e.response != null) {
-                          Navigator.pushNamed(context, widget.ResponseRoute,arguments: {'status' : e.response.statusCode});
-                          print(" >>>>>>>>>>>>>> " + e.response.statusCode.toString());
-
-                        } else {
-                          // Something happened in setting up or sending the request that triggered an Error
-                          Navigator.pushNamed(context, widget.ResponseRoute,arguments: {'status' : e.response.statusCode});
-                          print(" <<<<<<<<<<<<<<<< " + e.response.statusCode.toString());
-                        }
-                      }
+                      // Response response;
+                      // var dio = Dio();
+                      //
+                      // try {
+                      //   //404
+                      //   var formData = FormData.fromMap({
+                      //     'country': widget.Country,
+                      //     'document_type': widget.DocumentType,
+                      //     'file': await MultipartFile.fromFile(widget.imagepath.path,filename: 'image.png')
+                      //   });
+                      //   response = await dio.post(
+                      //       widget.ServerURL,
+                      //       data: formData,
+                      //       options: Options(
+                      //         headers: {
+                      //           "X-Access-Key": widget.AccessKey,
+                      //           "X-Secret-Key" :widget.SecretKey
+                      //         },
+                      //     ),
+                      //   );
+                      //
+                      //   print("Success");
+                      //  Navigator.pushNamed(context, widget.ResponseRoute,arguments: {'status' : response.statusCode});
+                      //
+                      //
+                      // } on DioError catch (e) {
+                      //   // The request was made and the server responded with a status code
+                      //   // that falls out of the range of 2xx and is also not 304.
+                      //   if (e.response != null) {
+                      //     Navigator.pushNamed(context, widget.ResponseRoute,arguments: {'status' : e.response.statusCode});
+                      //     print(" >>>>>>>>>>>>>> " + e.response.statusCode.toString());
+                      //
+                      //   } else {
+                      //     // Something happened in setting up or sending the request that triggered an Error
+                      //     Navigator.pushNamed(context, widget.ResponseRoute,arguments: {'status' : e.response.statusCode});
+                      //     print(" <<<<<<<<<<<<<<<< " + e.response.statusCode.toString());
+                      //   }
+                      // }
 
 
                     },
