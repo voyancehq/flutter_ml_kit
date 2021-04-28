@@ -20,6 +20,12 @@ class MLKit {
     );
   }
 
+  // uploadDocument takes in an Image file, county and documentType as a parameter
+  // and upload it to the file server
+  int uploadDocument(Image image, String country, String documentType){
+    return 200;
+  }
+
   // isImageBlurry takes in an Image file as a parameter
   // and check if the image is blurry by outputting boolean
   bool isImageBlurry(Image image){
