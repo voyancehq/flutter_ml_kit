@@ -74,6 +74,16 @@ class _VCaptureSend extends State<VCaptureSend> {
                       // print(widget.Country);
                       // print(widget.DocumentType);
 
+                      Image image = Image.file(widget.imagepath);
+
+                      File file = widget.imagepath;
+
+                      dynamic laplacian = await ImgProc.laplacian(await file.readAsBytes(), 10);
+
+                      print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+                      print(laplacian);
+                      print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+
 
                       Response response;
                       var dio = Dio();
